@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Threads</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header> 
+        <div>
+            <h1><a style="text-decoration:none;" href="index.html">GamePlay</a></h1>
+            <ul type="none">
+                <li><a style="text-decoration:none;" href="index.html">Home</a></li>
+                <li><a style="text-decoration:none;" href="about.html">About</a></li>
+                <li><a style="text-decoration:none;" href="threads.html">Threads</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Create a Thread</h2>
+            <form action="thread_post_handler.php" method="post">
+                <label for="title">Thread Title:</label>
+                <input type="text" id="title" name="title" placeholder="Enter thread title" required>
+
+                <label for="content">Thread Content:</label>
+                <textarea id="content" name="content" placeholder="Enter thread content" required></textarea>
+
+                <button type="submit">Create Thread</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
