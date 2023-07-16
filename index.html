@@ -2,10 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>GamePlay</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
 </head>
+<!--lets stick to a couple of colors so it's not too maximalist-->
+<!--I added a couple of comments to kind of guide how it will look formatted without all the colors and what not-->
 <body>
-    
+    <header> 
+        <div>
+            <!--use the same header for every page-->
+            <h1><a style="text-decoration:none;" href="index.html">GamePlay</a></h1> <!--navigates to homepage when clicked--><!--make centered-->
+            <ul type="none"> <!--make into a horizontal and centered navigation bar-->
+                <!--when pressing each tab, it will take users to a different page -->
+                <li><a style="text-decoration:none;" href="index.html">Home</a></li>
+                <li><a style="text-decoration:none;" href="about.html">About</a></li>
+                <li><a style="text-decoration:none;" href="threads.html">Threads</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section>
+            <!--this is where users can post their statuses -->
+            <!-- we will eventually get to the advanced prototype using javascript to handle statuses-->
+            <form action="status_post_handler.js" method="post"> 
+                <label for="status">Post a Status:</label>
+                <textarea id="status" name="status" placeholder="Enter your status"></textarea>
+                <button type="submit">Post</button>
+            </form>
+            
+            <h2>Trending Games</h2><!--rotating image slide show-->
+            <div>
+                <img src="minecraft.jpeg" alt="Minecraft">
+                <img src="cod4.avif" alt="Call of Duty: Black Ops IIII">
+                <img src="roblox.jpeg" alt="Roblox">
+                <img src="zelda.jpeg" alt="The Legend of Zelda: Breath of the Wild">
+                <img src="Logo-Overwatch.jpg" alt="Overwatch">
+            </div>
+            <table> <!--table at the bottom of the page-->
+                <!--no borders for the table? see how you like it styled to be more pleasing-->
+            <Caption>Share with your friends!</Caption> <!--graphical links to share with friends-->
+            <!--resize each of these to be the same size-->
+                <th><a href="https://twitter.com/"><img src="twitter-logo.png"></a></th>
+                <th><a href="https://www.facebook.com/"><img src="facebook_logo.jpg"></a></th>
+                <th><a href="https://www.instagram.com/"><img src="instagram_logo.png"></a></th>
+            </table>
+        </section>
+    </main>
 </body>
 </html>
