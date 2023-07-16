@@ -2,34 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Threads</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
+    <title>GamePlay</title>
+    <link rel="stylesheet" href="styleproto.css">
+    <script src="https://kit.fontawesome.com/a1a741b3b7.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header> 
-        <div>
-            <h1><a style="text-decoration:none;" href="index.html">GamePlay</a></h1>
-            <ul type="none">
-                <li><a style="text-decoration:none;" href="index.html">Home</a></li>
-                <li><a style="text-decoration:none;" href="about.html">About</a></li>
-                <li><a style="text-decoration:none;" href="threads.html">Threads</a></li>
+    <wrapper>
+        <nav>
+            <!--nav bar should be on every page-->
+            <div class="left-nav">
+                <h1>GamePlay</h1>
+            <ul class="left-nav-list">
+                <li class="nav-item">About</li>
+                <li class="nav-item">Threads</li>
+            </ul></div><ul class="right-nav-list">
+                <li>Login</li>
+                <li>Register</li>
             </ul>
+        </nav>
+        <div class="forum-box"> <!--this is where we can post-->
+            <section class="category">
+                <div class="forum-box">
+                    <section class="category">
+                        <div class="head">
+                            <h2 class="head-title">Lorem, ipsum</h2><!--1st section-->
+                        </div>
+                        <div class="content">
+                            <div class="conent-left">
+                                <div class="title-info">
+                                    <h4 class="title">Share</h4>
+                                    <form>
+                                        <textarea id="status" rows="4" cols="50"></textarea><br>
+                                        <button type="button">Post</button> <!--we will eventually get to javascript to
+                                        retain memory and what not-->
+                                    </form>
+                            </div>
+                        </div>
+                    </section>         
+            </section> 
         </div>
-    </header>
-    <main>
-        <section>
-            <h2>Create a Thread</h2>
-            <form action="thread_post_handler.php" method="post">
-                <label for="title">Thread Title:</label>
-                <input type="text" id="title" name="title" placeholder="Enter thread title" required>
-
-                <label for="content">Thread Content:</label>
-                <textarea id="content" name="content" placeholder="Enter thread content" required></textarea>
-
-                <button type="submit">Create Thread</button>
-            </form>
-        </section>
-    </main>
+    </wrapper>
 </body>
 </html>
