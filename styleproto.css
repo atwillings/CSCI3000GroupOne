@@ -35,6 +35,16 @@ nav {
 
 .left-nav-list {
     list-style: none;
+    padding: 50px;
+    margin: 0;
+    display: flex;
+
+}
+.nav-item {
+    list-style: none;
+    padding: 25px;
+    margin: 0;
+    display: flex;
 }
 
 .right-nav {
