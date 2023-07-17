@@ -3,57 +3,56 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About Us</title>
-        <style>
-            #grad1 {
-  height: 735px;
-  width: 10000000px;
-  background-image: linear-gradient(teal, green, teal);
-}
-            h1 {
-                font-family: Luminari, sans-serif;
-            }
-        
-             h1 {
-                text-decoration: underline;
-            }
-            body {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                text-align: center;
-            }
-            
-            h1 {
-                font-size: 24px;
-            }
-            
-            h2 {
-                font-size: 20px;
-            }
-        </style>
+        <title>GamePlay</title>
+        <link rel="stylesheet" href="styleproto.css">
+        <script src="https://kit.fontawesome.com/a1a741b3b7.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div id="grad1">
-        <ul type="none">
-            
-            <li><h1>About Us</h1></li>
-            <li><h2>Who Are We?</h2></li>
-            
-            <p><br>Welcome to GamePlay, the ultimate gaming forum where players come together to
-                discuss their favorite games, strategies, and everything in between!
-                <br>Whether you're a seasoned gamer or just starting your gaming journey, this
-                forum is the perfect place to<br> connect with a vibrant community of like-minded individuals
-                who share similar passions!</br></p>
-            <li><h2>Our Mission</h2></li>
-            <p><br>The mission of Gameplay is to provide a dynamic and inclusive platform 
-                for gamers to connect, engage, and share their passion for gaming.<br> 
-            We strive to foster a welcoming and supportive community where gamers of all levels 
-                can come together to exchange ideas, strategies, and experiences.<br>
-                By promoting collaboration, knowledge-sharing, and positive interactions, <br>
-                we aim to enhance the gaming journey and create a space that 
-                celebrates the diverse and ever-evolving world of gaming.</br></p>
+        <nav>
+            <!--nav bar should be on every page-->
+            <div class="left-nav">
+                <h1>GamePlay</h1> <!--when clicked, this will lead you back to home-->
+            <ul class="left-nav-list">
+                <li class="nav-item">About</li><!--when clicked, this will lead you to about page-->
+                <li class="nav-item">Threads</li><!--when clicked, this will lead you to thread page-->
+            </ul></div><ul class="right-nav-list">
+                <li>Login</li> <!--login and register using form tag and javascript-->
+                <li>Register</li>
+            </ul>
+        </nav>
+        <div>
+  
+            <div class="forum-box">
+                <section class="category">
+                    <div class="head">
+                        <h2 class="head-title">About Us & Our Mission</h2> <!--1st section for recent activities-->
+                        <h3 class="head-desc"></h3>
+                    </div>
+                    
+                    <div class="content">
+                        <div class="content-right">
+                            <div class="title-info">
+                                <p>Welcome to GamePlay, the ultimate gaming forum where players come together to
+                                    discuss their favorite games, strategies, and everything in between!
+                                    Whether you're a seasoned gamer or just starting your gaming journey, this
+                                    forum is the perfect place to connect with a vibrant community of like-minded individuals
+                                    who share similar passions!</p> 
+                                    <br><p>The mission of Gameplay is to provide a dynamic and inclusive platform 
+                                        for gamers to connect, engage, and share their passion for gaming.
+                                        We strive to foster a welcoming and supportive community where gamers of all levels 
+                                        can come together to exchange ideas, strategies, and experiences.
+                                        By promoting collaboration, knowledge-sharing, and positive interactions,
+                                        we aim to enhance the gaming journey and create a space that 
+                                        celebrates the diverse and ever-evolving world of gaming.</p></br>
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="content-nums">
+                            </div>
+                            <h5 class="last-post-sig"></h5>
+                        </div>
+                    </div> 
+                </div>
             </div>
         </ul>
     </body>
