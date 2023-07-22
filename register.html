@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register</title>
+        <link rel="stylesheet" href="styleproto.css">
+        <script src="https://kit.fontawesome.com/a1a741b3b7.js" crossorigin="anonymous"></script>
+    </head>
+<body>
+    <wrapper>
+        <nav> <!--DO NOT ALTER  <nav> UNLESS NEEDED-->
+            <!--nav bar should be on every page-->
+            <div class="left-nav">
+                <h1>GamePlay</h1> <!--when clicked, this will lead you back to home-->
+            <ul class="left-nav-list">
+                <li class="nav-item"><a href="about.html" style="text-decoration: none ; color: white;">About</a></li><!--when clicked, this will lead you to about page-->
+                <li class="nav-item"><a href="threads.html" style="text-decoration: none ; color: white;">Threads</a></li><!--when clicked, this will lead you to thread page-->
+            </ul></div><ul class="right-nav-list">
+                <li><a href="loginpage.html" style="text-decoration: none ; color: white;">Login</a></li> <!--login and register using form tag and javascript-->
+                <li><a href="register.html" style="text-decoration: none ; color: white;">Register</a></li>
+            </ul>
+        </nav>
+        <div class = "forum-box">
+            <section class="category">
+                <div class = "head">
+                    <h2 class="head-title">Register</h2>
+                </div>
+                <div class="content">
+                    <div class="content-left">
+                        <div class="title-info">
+                            <form class="title">
+                                <label for="username">Username:</label>
+                                <input type="text" id="username" name="username" required>
+                            
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password" required>
+                            
+                                <label for="confirmPassword">Confirm Password:</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            
+                                <input type="submit" value="Register">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </wrapper>
+</body>
+</html>
