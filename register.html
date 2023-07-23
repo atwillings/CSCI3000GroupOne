@@ -7,12 +7,16 @@
         <link rel="stylesheet" href="styleproto.css">
         <script src="https://kit.fontawesome.com/a1a741b3b7.js" crossorigin="anonymous"></script>
     </head>
+    <style>
+        
+    </style>
 <body>
     <wrapper>
-        <nav> <!--DO NOT ALTER  <nav> UNLESS NEEDED-->
+        <nav>
             <!--nav bar should be on every page-->
-            <div class="left-nav">
-                <h1>GamePlay</h1> <!--when clicked, this will lead you back to home-->
+            <div class="left-nav" id="container">
+                <img class="image" src="photo.png">
+                <h1 class="text"><a style="text-decoration:none; color:white;" href="indexproto.html">GamePlay</a></h1> <!--when clicked, this will lead you back to home-->
             <ul class="left-nav-list">
                 <li class="nav-item"><a href="about.html" style="text-decoration: none ; color: white;">About</a></li><!--when clicked, this will lead you to about page-->
                 <li class="nav-item"><a href="threads.html" style="text-decoration: none ; color: white;">Threads</a></li><!--when clicked, this will lead you to thread page-->
@@ -27,22 +31,22 @@
                     <h2 class="head-title">Register</h2>
                 </div>
                 <div class="content">
-                    <div class="content-left">
+                    <div class="register-box">
                         <div class="title-info">
-                            <form class="title">
-                                <label for="username">Username:</label>
-                                <input type="text" id="username" name="username" required>
+                            <form class="user-form"> <!--this is where users can input the info-->
+                                <label class="user-label" for="username"></label>
+                                <input class="user-input" type="text" id="username" name="username" placeholder="Username..." required>
                             
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
+                                <label for="email"></label>
+                                <input class="user-input" type="email" id="email" name="email" placeholder="Email..." required>
                             
-                                <label for="password">Password:</label>
-                                <input type="password" id="password" name="password" required>
+                                <label for="password"></label>
+                                <input class="user-input" type="password" id="password" name="password" placeholder="Password..." min="8" max="20" required>
                             
-                                <label for="confirmPassword">Confirm Password:</label>
-                                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                                <label for="confirmPassword"></label>
+                                <input class="user-input" type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password..." min="8" max="20" required>
                             
-                                <input type="submit" value="Register">
+                                <button type="submit" value="Register">Register</button>
                             </form>
                         </div>
                     </div>
@@ -50,5 +54,6 @@
             </section>
         </div>
     </wrapper>
+    <script src="index.js"></script>
 </body>
 </html>
