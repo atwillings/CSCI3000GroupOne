@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html lang="">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Register</title>
-        <link rel="stylesheet" href="styleproto.css">
-        <script src="https://kit.fontawesome.com/a1a741b3b7.js" crossorigin="anonymous"></script>
-    </head>
-    <style>
-        
-    </style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamePlay</title>
+    <link rel="stylesheet" href="styleproto.css">
+    <script src="https://kit.fontawesome.com/a1a741b3b7.js" crossorigin="anonymous"></script>
+</head>
 <body>
     <wrapper>
         <nav>
@@ -25,33 +22,24 @@
                 <li><a href="register.html" style="text-decoration: none ; color: white;">Register</a></li>
             </ul>
         </nav>
-        <div class = "forum-box">
+        <div class="forum-box">
             <section class="category">
-                <div class = "head">
-                    <h2 class="head-title">Register</h2>
+                <div class="head">
+                    <h2 class="head-title">Share Here!</h2> <!--1st section for recent activities-->
+                    <h3 class="head-desc"></h3>
                 </div>
+                
                 <div class="content">
-                    <div class="register-box">
+                    <div class="content-left">
                         <div class="title-info">
-                            <form class="user-form"> <!--this is where users can input the info-->
-                                <label class="user-label" for="username"></label>
-                                <input class="user-input" type="text" id="username" name="username" placeholder="Username..." required>
-                            
-                                <label for="email"></label>
-                                <input class="user-input" type="email" id="email" name="email" placeholder="Email..." required>
-                            
-                                <label for="password"></label>
-                                <input class="user-input" type="password" id="password" name="password" placeholder="Password..." min="8" max="20" required>
-                            
-                                <label for="confirmPassword"></label>
-                                <input class="user-input" type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password..." min="8" max="20" required>
-                            
-                                <button type="submit" value="Register">Register</button>
+                            <form style="margin-top: 200px;">
+                                <textarea id="status" rows="10" cols="60" placeholder="Tell us what you're thinking..."></textarea><br>
+                                <button type="button">Post</button> <!--we will eventually get to javascript to retain memory and what not-->
                             </form>
                         </div>
                     </div>
-                </div>
-            </section>
+                </div>     
+        </div>              
         </div>
     </wrapper>
     <script src="index.js"></script>
