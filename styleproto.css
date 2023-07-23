@@ -7,7 +7,27 @@
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
+#container {
+    position: relative;
+    width: 400px; /* Set the width and height of the container to match your image */
+    height: 300px;
+}
 
+.image {
+    width: 75%;
+    height: 25%;
+}
+
+.text {
+    position: absolute;
+    top: 50%; /* Adjust the position of the text as needed */
+    left: 25%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+    outline-color: gray;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional text shadow for better visibility */
+}
 body {
     background-color: #1e2324;
 }
@@ -106,4 +126,40 @@ nav {
 
 i {
     padding-right: 1rem;
+}
+
+.user-form {
+    display: flex;
+    flex-direction: column;
+  }
+.user-label {
+    margin-bottom: 5px;
+}
+.user-input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+
 }
