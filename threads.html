@@ -9,10 +9,11 @@
 </head>
 <body>
     <wrapper>
-        <nav> <!--DO NOT ALTER  <nav> UNLESS NEEDED-->
+        <nav>
             <!--nav bar should be on every page-->
-            <div class="left-nav">
-                <h1>GamePlay</h1> <!--when clicked, this will lead you back to home-->
+            <div class="left-nav" id="container">
+                <img class="image" src="photo.png">
+                <h1 class="text"><a style="text-decoration:none; color:white;" href="indexproto.html">GamePlay</a></h1> <!--when clicked, this will lead you back to home-->
             <ul class="left-nav-list">
                 <li class="nav-item"><a href="about.html" style="text-decoration: none ; color: white;">About</a></li><!--when clicked, this will lead you to about page-->
                 <li class="nav-item"><a href="threads.html" style="text-decoration: none ; color: white;">Threads</a></li><!--when clicked, this will lead you to thread page-->
@@ -21,27 +22,26 @@
                 <li><a href="register.html" style="text-decoration: none ; color: white;">Register</a></li>
             </ul>
         </nav>
-        <div class="forum-box"> <!--this is where we can post-->
+        <div class="forum-box">
             <section class="category">
-                <div class="forum-box">
-                    <section class="category">
-                        <div class="head">
-                            <h2 class="head-title">Lorem, ipsum</h2><!--1st section-->
+                <div class="head">
+                    <h2 class="head-title">Share Here!</h2> <!--1st section for recent activities-->
+                    <h3 class="head-desc"></h3>
+                </div>
+                
+                <div class="content">
+                    <div class="content-left">
+                        <div class="title-info">
+                            <form style="margin-top: 200px;">
+                                <textarea id="status" rows="10" cols="60" placeholder="Tell us what you're thinking..."></textarea><br>
+                                <button type="button">Post</button> <!--we will eventually get to javascript to retain memory and what not-->
+                            </form>
                         </div>
-                        <div class="content">
-                            <div class="conent-left">
-                                <div class="title-info">
-                                    <h4 class="title">Share</h4>
-                                    <form>
-                                        <textarea id="status" rows="4" cols="50"></textarea><br>
-                                        <button type="button">Post</button> <!--we will eventually get to javascript to
-                                        retain memory and what not-->
-                                    </form>
-                            </div>
-                        </div>
-                    </section>         
-            </section> 
+                    </div>
+                </div>     
+        </div>              
         </div>
     </wrapper>
+    <script src="index.js"></script>
 </body>
 </html>
