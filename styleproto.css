@@ -6,11 +6,18 @@
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
+    color: rgb(208, 213, 218);
+
 }
 #container {
     position: relative;
     width: 400px; /* Set the width and height of the container to match your image */
     height: 300px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 .image {
@@ -29,77 +36,84 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional text shadow for better visibility */
 }
 body {
-    background-color: #1e2324;
+    background-color: #161616;
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    width: calc(100% - 8rem);
-    height: 2rem;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 4rem;
-    align-items: center;
+#logo {
+    position: absolute;
+    width: 80%;
+    height: 7.5rem;
+    left: 50%;
+    top: 1rem;
+    transform: translate(-50%, 0%);
+}
+
+#logo-image {
+    position: absolute;
+    height: 7.5rem;
+}
+
+#logo-title {
+    position: absolute;
+    top: 3rem;
+    left: 5.5rem;
     color: white;
+    text-shadow: black 3px 1px 1px;
 }
 
-
-.left-nav {
+#nav-lower {
+    position: absolute;
     display: inline-flex;
-    align-items: center;
-    width: 12.5rem;
+    width: 80%;
+    height: auto;
+    top: 10rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: white;
+    list-style: none;
     justify-content: space-between;
-    
+    font-size: .75rem;
 }
 
-.left-nav-list {
+#nav-left {
+    display: inline-flex;
     list-style: none;
-    padding: 50px;
-    margin: 0;
-    display: flex;
-
+    justify-content: space-between;
+    width: 10rem;
 }
-.nav-item {
+
+#nav-right {
+    display: inline-flex;
     list-style: none;
-    padding: 25px;
-    margin: 0;
-    display: flex;
-}
-
-.right-nav {
-    
-}
-
-.right-nav-list {
-    list-style: none;
+    justify-content: space-between;
+    width: 10rem;
 }
 
 .forum-box {
     position: absolute;
     display: block;
-    top: 50%;
+    top: 13rem;
     left: 50%;
     width: 80%;
-    height: 83%;
-    transform: translate(-50%, -50%); 
-    background-color: white;
-    border-radius: .5rem;
+    height: auto;
+    transform: translate(-50%, 0%); 
+    background-color: #242629;
     padding: .25rem;
 }
 
 .head {
     display: inline-flex;
     align-items: center;
-    background-color: gray;
+    background-color: rgb(99, 241, 97);
     width: 96%;
-    height: 4rem;
+    height: 3rem;
     padding: 0px 2%;
-    border-radius: .5rem .5rem 0rem 0rem;
 }
 
 .head-title {
     padding: .25rem;
+    color: #242629;
+    font-size: 1.25rem;
 }
 
 .head-desc {
@@ -112,10 +126,12 @@ nav {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
-    background-color: whitesmoke;
+    background-color: #242629;
     width: 96%;
     height: 4rem;
     padding: 0px 2%;
+    border-bottom: 1px solid rgb(51, 51, 51);
+    border-top: 1px solid rgb(97, 97, 97);
 }
 
 .content-left {
@@ -130,11 +146,14 @@ i {
 
 .user-form {
     display: flex;
+    align-items: center;
     flex-direction: column;
-  }
+}
+
 .user-label {
     margin-bottom: 5px;
 }
+
 .user-input {
     padding: 8px;
     margin-bottom: 10px;
@@ -162,4 +181,27 @@ button:hover {
     display: flex;
     flex-direction: column;
 
+}
+
+#login-panel {
+    position: absolute;
+    display: none;
+    right: 5rem;
+    top: 12rem;
+    background-color: black;
+    width: 15rem;
+    height: auto;
+    z-index: 2;
+    padding: 1rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+#login {
+    cursor: pointer;
 }
