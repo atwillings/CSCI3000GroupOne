@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html lang="">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Register</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="https://kit.fontawesome.com/a1a741b3b7.js" crossorigin="anonymous"></script>
-    </head>
-    <style>
-        
-    </style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a1a741b3b7.js" crossorigin="anonymous"></script>
+</head>
 <body>
     <wrapper>
         <nav>
@@ -20,7 +17,7 @@
             <div id="nav-lower">
                 <div id="nav-left">
                     <h2><a href="about.html">About</a></h2>
-                    <h2><a href="threads.html">Threads</a></h2>
+                    <h2><a href="discussion.html">Discussions</a></h2>
                 </div>
                 <div id="nav-right">
                     <h2><a href="loginpage.html">Login</a></h2>
@@ -28,35 +25,115 @@
                 </div>
             </div>
         </nav>
-        <div class = "forum-box">
+        <div class="forum-box">
             <section class="category">
-                <div class = "head">
-                    w<h2 class="head-title">Register</h2>
+                <div class="head">
+                    <h2 class="head-title">Register</h2>
                 </div>
                 <div class="content">
                     <div class="register-box">
                         <div class="title-info">
-                            <form class="user-form"> <!--this is where users can input the info-->
-                                <label class="user-label" for="username"></label>
-                                <input class="user-input" type="text" id="username" name="username" placeholder="Username..." required>
+                            <form class="user-form" id="registration-form">
+                                <label for="username">Username</label>
+                                <input class="user-input" type="text" id="username" name="username" placeholder="Enter a username" required>
+                                <p id="username-error" class="error-message"></p>
                             
-                                <label for="email"></label>
-                                <input class="user-input" type="email" id="email" name="email" placeholder="Email..." required>
+                                <label for="email">Email</label>
+                                <input class="user-input" type="email" id="email" name="email" placeholder="Enter your email" required>
+                                <p id="email-error" class="error-message"></p>
                             
-                                <label for="password"></label>
-                                <input class="user-input" type="password" id="password" name="password" placeholder="Password..." min="8" max="20" required>
+                                <label for="password">Password</label>
+                                <input class="user-input" type="password" id="password" name="password" placeholder="Choose a password (8-20 characters)" minlength="8" maxlength="20" required>
+                                <div class="password-strength-indicator">
+                                    <div class="indicator"></div>
+                                    <p class="strength-message">Password Strength: <span class="message"></span></p>
+                                </div>
+                                <ul class="password-requirements">
+                                    <li>Minimum 8 characters</li>
+                                    <li>Maximum 20 characters</li>
+                                    <li>Include at least one uppercase letter</li>
+                                    <li>Include at least one lowercase letter</li>
+                                    <li>Include at least one special character</li>
+                                </ul>
+                                <p id="password-error" class="error-message"></p>
                             
-                                <label for="confirmPassword"></label>
-                                <input class="user-input" type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password..." min="8" max="20" required>
+                                <label for="confirmPassword">Confirm Password</label>
+                                <input class="user-input" type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" minlength="8" maxlength="20" required>
+                                <span class="password-toggle" onclick="togglePasswordVisibility()">
+                                    <i class="fas fa-eye" id="toggle-icon"></i>
+                                </span>
+                                <p id="confirmPassword-error" class="error-message"></p>
                             
-                                <button type="submit" value="Register">Register</button>
+                                <button type="submit">Register</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
+        <div class="footer">
+            <div class="sitemap">
+                <h3>Site Map</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="discussion.html">Discussions</a></li>
+                    <li><a href="loginpage.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <!-- Add other relevant links here -->
+                </ul>
+            </div>
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <p>Email: Gameplay@gmail.com</p>
+                <p>Phone: +1 404-456-7480</p>
+            </div>
+            <div class="social">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                    <!-- Add other social media links here -->
+                </ul>
+            </div>
+        </div>
     </wrapper>
     <script src="index.js"></script>
+    <script>
+        // Function to toggle password visibility
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            const toggleIcon = document.getElementById('toggle-icon');
+        
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.classList.remove('fa-eye');
+                toggleIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.classList.remove('fa-eye-slash');
+                toggleIcon.classList.add('fa-eye');
+            }
+        }
+        
+        // Function to check password strength and update the indicator and message
+        function checkPasswordStrength() {
+            const passwordInput = document.getElementById('password');
+            const strengthIndicator = document.querySelector('.password-strength-indicator .indicator');
+            const strengthMessage = document.querySelector('.password-strength-indicator .message');
+        
+            // Add your password strength checking logic here and update the indicator and message accordingly
+            // You can use classes like 'weak', 'medium', and 'strong' to style the indicator
+            // You can also update the strengthMessage.textContent to display the strength message
+        }
+        
+        // Add event listeners
+        document.getElementById('password').addEventListener('input', checkPasswordStrength);
+        document.getElementById('registration-form').addEventListener('submit', handleRegistration);
+    </script>
+</body>
+</html>
+
 </body>
 </html>
