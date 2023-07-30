@@ -305,6 +305,17 @@ button:hover {
     width: calc(100% - 4rem);
 }
 
+#dynamic-footer {
+    position: absolute;
+    bottom: -50vh;
+    background-color: #242629;
+    color: #d0d5da;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 4rem);
+}
+
 .sitemap h3, .contact h3, .social h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
