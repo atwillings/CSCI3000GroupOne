@@ -1,45 +1,47 @@
-// Function to handle form submission and display the most recent post
-function handleFormSubmit(event) {
+// threads2.js
+
+// Function to add a new post
+function addPost(event) {
   event.preventDefault();
 
-  const statusText = document.getElementById("status").value;
-
-  if (statusText.trim() !== "") {
-    const currentDate = new Date().toLocaleString();
-    const post = { text: statusText, timestamp: currentDate };
-
-    addPostToLocalStorage(post);
-    displayRecentPosts();
+  const statusText = document.getElementById('status').value;
+  if (!statusText.trim()) {
+      alert('Please enter your post.');
+      return;
   }
 
-  document.getElementById("postForm").reset();
+  const userPostsContainer = document.getElementById('user-posts');
+  const postDiv = document.createElement('div');
+  postDiv.classList.add('post');
+
+  const postContent = `
+        <div class="post-left">
+            <h2 class="post-title">${statusText}</h2>
+            <div class="post-under">
+                <h3 class="post-author">Your Name</h3>
+                <h3 class="post-time">${getCurrentTime()}</h3>
+            </div>
+        </div>
+        <div class="post-right">
+            <h4 class="views">0 Views</h4>
+            <h4 class="replies">0 Replies</h4>
+        </div>
+  `;
+
+  postDiv.innerHTML = postContent;
+  userPostsContainer.prepend(postDiv);
+
+  // Clear the textarea after posting
+  document.getElementById('status').value = '';
 }
 
-// Function to add a post to local storage
-function addPostToLocalStorage(post) {
-  let posts = JSON.parse(localStorage.getItem("posts")) || [];
-  posts.unshift(post);
-  localStorage.setItem("posts", JSON.stringify(posts));
+// Helper function to get current time in the format: "hh:mm am/pm M/D/YY"
+function getCurrentTime() {
+  const now = new Date();
+  const options = { hour: '2-digit', minute: '2-digit', hour12: true, month: 'numeric', day: 'numeric', year: '2-digit' };
+  return now.toLocaleString('en-US', options);
 }
 
-// Function to display the most recent posts
-function displayRecentPosts() {
-  const postsContainer = document.getElementById("postsContainer");
-  const posts = JSON.parse(localStorage.getItem("posts")) || [];
+// Add event listener to the "Post" button
+document.getElementById('post-button').addEventListener('click', addPost);
 
-  let postsHTML = "";
-  posts.forEach((post) => {
-    postsHTML += `<div class="post">
-                      <p>${post.text}</p>
-                      <span class="timestamp">${post.timestamp}</span>
-                   </div>`;
-  });
-
-  postsContainer.innerHTML = postsHTML;
-}
-
-// Attach form submission event handler
-document.getElementById("postForm").addEventListener("submit", handleFormSubmit);
-
-// Display the most recent posts on page load
-displayRecentPosts();
