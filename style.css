@@ -33,7 +33,7 @@ body {
 .wrapper {
     position: relative;
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 0 10px;
     color: #d0d5da;
@@ -150,9 +150,9 @@ nav {
 
 /* Content */
 .content {
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     background-color: #242629;
     width: 96%;
     height: auto;
@@ -244,6 +244,19 @@ button:hover {
 }
 
 /* Posts */
+
+.new-content {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #242629;
+    width: 96%;
+    height: auto;
+    padding: 1rem 2%;
+    border-bottom: 1px solid rgb(51, 51, 51);
+    border-top: 1px solid rgb(97, 97, 97);
+}
+
 .post {
     display: flex;
     border-bottom: 1px solid rgb(51, 51, 51);
@@ -251,6 +264,7 @@ button:hover {
     justify-content: space-between;
     align-items: center;
     padding: .25rem;
+    width: 100%;
 }
 
 .post-left {
@@ -280,12 +294,15 @@ button:hover {
 }
 
 /* Footer */
-footer {
+.footer {
+    position: absolute;
+    bottom: -50vh;
     background-color: #242629;
     color: #d0d5da;
-    padding: 20px;
+    padding: 2rem;
     display: flex;
     justify-content: space-between;
+    width: calc(100% - 4rem);
 }
 
 .sitemap h3, .contact h3, .social h3 {
