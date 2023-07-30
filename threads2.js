@@ -33,6 +33,11 @@ function addPost(event) {
 
   // Clear the textarea after posting
   document.getElementById('status').value = '';
+
+  const dynFooter = document.getElementById("dynamic-footer");
+  const style = getComputedStyle(dynFooter);
+  let bottomSize = style.bottom;
+  dynFooter.style.bottom = `${parseInt(bottomSize)-75}px`
 }
 
 // Helper function to get current time in the format: "hh:mm am/pm M/D/YY"
