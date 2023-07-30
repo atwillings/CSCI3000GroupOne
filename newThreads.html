@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamePlay</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a1a741b3b7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <wrapper>
+        <nav>
+            <div id="logo">
+                <img id="logo-image" src="photo.png">
+                <h1 id="logo-title"><a href="index.html">GamePlay</a></h1>
+            </div>
+            <div id="nav-lower">
+                <div id="nav-left">
+                    <h2><a href="about.html">About</a></h2>
+                    <h2><a href="discussion.html">Discussions</a></h2>
+                </div>
+                <div id="nav-right">
+                    <h2><a href="loginpage.html">Login</a></h2>
+                    <h2><a href="register.html">Register</a></h2>
+                </div>
+            </div>
+        </nav>
+        <div class="forum-box">
+            <!-- Section for recent activities -->
+            <section class="category">
+                <div class="head">
+                    <h2 class="head-title">Share Here!</h2>
+                    <h3 class="head-desc">Post your thoughts and ideas</h3>
+                </div>
+                <div class="content">
+                    <div class="content-left">
+                        <div class="title-info">
+                            <form>
+                                <textarea style="color: black; padding: 1rem;" id="status" rows="10" cols="60" placeholder="Tell us what you're thinking..."></textarea><br>
+                                <button id="post-button">Post</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section for displaying user posts -->
+            <section class="category">
+                <div class="head">
+                    <h2 class="head-title">Recent Posts</h2>
+                    <h3 class="head-desc">See what others are sharing</h3>
+                </div>
+                <div class="new-content" id="user-posts">
+                    <div class="post">
+                        <div class="post-left">
+                            <h2 class="post-title">Is this thing on?</h2>
+                            <div class="post-under">
+                                <h3 class="post-author">Wiggins</h3>
+                                <h3 class="post-time">11:30am 7/27/23</h3>
+                            </div>
+                        </div>
+                        <div class="post-right">
+                            <h4 class="views">5 Views</h4>
+                            <h4 class="replies">2 Replies</h4>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post-left">
+                            <h2 class="post-title">Is this working</h2>
+                            <div class="post-under">
+                                <h3 class="post-author">Parker</h3>
+                                <h3 class="post-time">3:45pm 7/27/23</h3>
+                            </div>
+                        </div>
+                        <div class="post-right">
+                            <h4 class="views">10 Views</h4>
+                            <h4 class="replies">6 Replies</h4>
+                        </div>
+                    </div>
+                    <!-- User posts will be dynamically added here -->
+                </div>
+            </section>
+        </div>
+        <div class="footer">
+            <div class="sitemap">
+                <h3>Site Map</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="discussion.html">Discussions</a></li>
+                    <li><a href="loginpage.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <!-- Add other relevant links here -->
+                </ul>
+            </div>
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <p>Email: Gameplay@gmail.com</p>
+                <p>Phone: +1 404-456-7480</p>
+            </div>
+            <div class="social">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                    <!-- Add other social media links here -->
+                </ul>
+            </div>
+        </div>
+    </wrapper>
+
+    <script src="index.js"></script>
+    <script src="threads2.js"></script>
+</body>
+
+</html>
+
